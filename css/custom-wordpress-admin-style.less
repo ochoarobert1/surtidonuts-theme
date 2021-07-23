@@ -1,0 +1,175 @@
+// compress: false, javascriptEnabled: true
+/* --------------------------------------------------------------
+CUSTOM WORDPRESS ADMIN OVERRIDES
+-------------------------------------------------------------- */
+
+/* --------------------------------------------------------------
+VARIABLES
+-------------------------------------------------------------- */
+
+@black: #000000;
+@white: #FFFFFF;
+@blue: #0073AA;
+@menu: #23282D;
+@menudark: #171a1d;
+
+/* --------------------------------------------------------------
+LOGIN PAGE
+-------------------------------------------------------------- */
+body.login {
+    background-color: @menu;
+}
+
+.login #nav {
+    text-align: center;
+}
+
+.login #backtoblog {
+    text-align: center;
+}
+
+.login #backtoblog a,
+.login #nav a {
+    text-decoration: none;
+    color: @white;
+}
+
+.login .button-primary {
+    float: none;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.login form {
+    padding: 26px 24px 30px;
+    background: #eeeeee;
+    border: 1px solid #eeeeee;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .8);
+}
+
+.login label {
+    font-size: 13px;
+    line-height: 1.8;
+    display: inline-block;
+    margin-bottom: 3px;
+    font-weight: 500;
+}
+
+
+/* --------------------------------------------------------------
+ADMIN STYLE
+-------------------------------------------------------------- */
+/* TOP OF METABOXES */
+.postbox .hndle,
+.stuffbox .hndle {
+    border-bottom: 1px solid @menu;
+    background: @menu;
+    color: @white;
+}
+
+/* MENU CUSTOM STYLE */
+#adminmenu #toplevel_page_surtidonuts-control-panel {
+    background: #464646;
+}
+
+#footer-thankyou a {
+    text-decoration: none;
+    font-weight: 600;
+    color: @menu;
+
+    &:hover {
+        color: @blue;
+    }
+}
+
+/* --------------------------------------------------------------
+CUSTOM MENU ADMIN PAGE
+-------------------------------------------------------------- */
+body.toplevel_page_surtidonuts-control-panel {
+    & #wpcontent {
+        padding-left: 0;
+    }
+
+    & .surtidonuts-admin-header-container {
+        background-color: @menudark;
+        padding: 1rem;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        & img {
+            max-width: 130px;
+        }
+
+        & h1 {
+            font-weight: 300;
+            color: @white;
+        }
+    }
+
+    & .surtidonuts-admin-content-container {
+        padding: 1rem;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        & .surtidonuts-admin-content-title {
+            ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin-bottom: 2rem;
+
+            & h2 {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+
+        & .surtidonuts-admin-content-item {
+            ms-flex: 0 0 33%;
+            flex: 0 0 30%;
+            max-width: 30%;
+            background: #e8e8e8;
+            border-radius: 10px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+
+            & .form-table th {
+                width: 170px;
+            }
+
+            & label {
+                display: block;
+                vertical-align: middle;
+                margin-bottom: 5px;
+                text-align: right;
+            }
+        }
+    }
+
+    & .surtidonuts-admin-content-submit {
+        ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* WP CUSTOMIZE */
+
+#accordion-section-std_social_settings,
+#accordion-section-std_cookie_settings {
+    & .accordion-section-title {
+        background: #24405c;
+        color: @white;
+    }
+}
